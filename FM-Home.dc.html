@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    a { text-decoration: none; color: inherit; }
+    body { background: #f6f1e7; font-family: 'DM Sans', sans-serif; }
+  </style>
+</helmet>
+
+<div style="min-height:100vh;display:flex;flex-direction:column">
+
+  <!-- NAV -->
+  <nav style="background:#1d3326;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;flex-shrink:0;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.2)">
+    <div style="display:flex;align-items:center;gap:10px">
+      <span style="font:800 14px/1 'Barlow Condensed',sans-serif;letter-spacing:.12em;color:#f6f1e7;text-transform:uppercase">The Farmer's Market</span>
+      <span style="background:#57906a;border-radius:99px;padding:2px 10px;font:500 10px 'DM Sans',sans-serif;color:#fff;letter-spacing:.08em;text-transform:uppercase">Idea Validation</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:32px">
+      <a href="#" style="font:400 13px 'DM Sans',sans-serif;color:rgba(246,241,231,.45)">About</a>
+      <a href="#" style="font:400 13px 'DM Sans',sans-serif;color:rgba(246,241,231,.45)">How It Works</a>
+      <a href="FM-01-Define-the-Problem.dc.html" style="background:#e5b040;border-radius:4px;padding:8px 18px;font:500 13px 'DM Sans',sans-serif;color:#1e2c22;line-height:1">Start Exploring ↓</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section style="background:radial-gradient(ellipse at 14% 72%, rgba(87,144,106,.12) 0%, transparent 58%), #f6f1e7;padding:64px 48px 56px">
+    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:64px">
+      <div style="flex:1">
+        <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:20px">
+          <div style="width:6px;height:6px;border-radius:50%;background:#57906a;flex-shrink:0"></div>
+          <span style="font:500 11px 'DM Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#57906a">Building a Strong Point of View</span>
+        </div>
+        <div style="font:800 76px/0.88 'Barlow Condensed',sans-serif;color:#1d3326;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:22px">Validate<br>Your Ideas<br>From Every<br>Angle.</div>
+        <p style="font:300 16px/1.65 'DM Sans',sans-serif;color:#4a5a4e;max-width:440px;margin-bottom:28px">A self-guided framework for exploring what you're building, who it's for, and why it matters. Jump in wherever feels most relevant right now.</p>
+        <span style="font:400 13px 'DM Sans',sans-serif;color:#8a7a5c;letter-spacing:.04em">Browse the board below ↓</span>
+      </div>
+      <div style="flex:0 0 380px;height:260px;border-radius:8px;background:repeating-linear-gradient(135deg,#ddd5c6 0px,#ddd5c6 1px,#e8e0d2 1px,#e8e0d2 16px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px">
+        <div style="width:56px;height:56px;border-radius:50%;background:rgba(29,51,38,.1);display:flex;align-items:center;justify-content:center">
+          <span style="font:400 24px system-ui;color:#4a5a4e;margin-left:4px">▶</span>
+        </div>
+        <span style="font:300 11px monospace;color:#8a7a60;letter-spacing:.06em">intro video · placeholder</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORK BOARD -->
+  <section style="padding:0 48px 64px">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="background:linear-gradient(to right, #8a6030, #5a3c18 13%, #6a4820 87%, #8a6030);border-radius:4px;overflow:hidden;box-shadow:0 4px 32px rgba(0,0,0,.18)">
+
+        <!-- Sign header -->
+        <div style="background:linear-gradient(to bottom, #7a5228, #5a3818 50%, #6a4820);padding:13px 48px;display:flex;align-items:center;gap:20px;border-bottom:2px solid #3a2210">
+          <div style="flex:1;height:1px;background:rgba(246,241,231,.2)"></div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:4px;height:4px;border-radius:50%;background:#e5b040;flex-shrink:0"></div>
+            <span style="font:800 12px 'Barlow Condensed',sans-serif;letter-spacing:.2em;color:#f6f1e7;text-transform:uppercase">Building a Strong Point of View</span>
+            <div style="width:4px;height:4px;border-radius:50%;background:#e5b040;flex-shrink:0"></div>
+          </div>
+          <div style="flex:1;height:1px;background:rgba(246,241,231,.2)"></div>
+        </div>
+
+        <!-- Cork surface -->
+        <div style="background:repeating-linear-gradient(47deg, rgba(155,105,38,.07) 0px, transparent 2px, transparent 13px), repeating-linear-gradient(-47deg, rgba(135,88,28,.07) 0px, transparent 2px, transparent 13px), linear-gradient(158deg, #caa85c 0%, #b89048 55%, #c2a05a 100%);padding:52px 48px 60px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px">
+
+            <!-- Card 1: Define the Problem -->
+            <a href="FM-01-Define-the-Problem.dc.html" style="position:relative;transform:rotate(-2.2deg);transform-origin:top center;display:block;transition:transform .2s ease" style-hover="transform:rotate(-2.2deg) translateY(-6px) scale(1.02)">
+              <div style="position:absolute;top:-11px;left:50%;transform:translateX(-50%);width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 38% 35%, #f99, #c22);box-shadow:0 2px 8px rgba(0,0,0,.62);z-index:2"></div>
+              <div style="background:linear-gradient(148deg, rgba(255,255,255,.14) 0%, transparent 55%), #d86c50;padding:30px 30px 26px;box-shadow:4px 8px 28px rgba(0,0,0,.44), 0 2px 5px rgba(0,0,0,.22)">
+                <div style="font:800 68px/1 'Barlow Condensed',sans-serif;color:rgba(255,255,255,.18);letter-spacing:-.02em;margin-bottom:4px">01</div>
+                <div style="border-top:1px solid rgba(255,255,255,.28);padding-top:10px;margin-bottom:9px"></div>
+                <div style="font:700 24px/1.1 'Barlow Condensed',sans-serif;color:#fff;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px">Define the Problem</div>
+                <p style="font:300 13px/1.55 'DM Sans',sans-serif;color:rgba(255,255,255,.78);margin-bottom:20px">Articulate the core challenge clearly enough to build from it.</p>
+                <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:16px">
+                  <span style="background:rgba(255,255,255,.18);border-radius:3px;padding:3px 8px;font:500 9px 'DM Sans',sans-serif;color:rgba(255,255,255,.85);letter-spacing:.08em;text-transform:uppercase">▶ Video</span>
+                  <span style="background:rgba(255,255,255,.18);border-radius:3px;padding:3px 8px;font:500 9px 'DM Sans',sans-serif;color:rgba(255,255,255,.85);letter-spacing:.08em;text-transform:uppercase">⊞ Templates</span>
+                  <span style="background:rgba(255,255,255,.18);border-radius:3px;padding:3px 8px;font:500 9px 'DM Sans',sans-serif;color:rgba(255,255,255,.85);letter-spacing:.08em;text-transform:uppercase">✦ AI Coach</span>
+                </div>
+                <div style="font:600 11px 'DM Sans',sans-serif;color:rgba(255,255,255,.55);letter-spacing:.1em;text-transform:uppercase">Enter →</div>
+              </div>
+            </a>
+
+            <!-- Card 2: Understand the User -->
+            <a href="FM-02-Understand-the-User.dc.html" style="position:relative;transform:rotate(1.9deg);transform-origin:top center;display:block;transition:transform .2s ease" style-hover="transform:rotate(1.9deg) translateY(-6px) scale(1.02)">
+              <div style="position:absolute;top:-8px;left:50%;transform:translateX(-50%);width:54px;height:14px;background:rgba(246,229,162,.76);border-radius:1px;box-shadow:0 1px 4px rgba(0,0,0,.22)"></div>
+              <div style="background:linear-gradient(148deg, rgba(255,255,255,.15) 0%, transparent 55%), #e5b040;padding:30px 30px 26px;box-shadow:4px 8px 28px rgba(0,0,0,.44), 0 2px 5px rgba(0,0,0,.22)">
+                <div style="font:800 68px/1 'Barlow Condensed',sans-serif;color:rgba(28,50,34,.16);letter-spacing:-.02em;margin-bottom:4px">02</div>
+                <div style="border-top:1px solid rgba(28,50,34,.2);padding-top:10px;margin-bottom:9px"></div>
+                <div style="font:700 24px/1.1 'Barlow Condensed',sans-serif;color:#1e2c22;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px">Understand the User</div>
+                <p style="font:300 13px/1.55 'DM Sans',sans-serif;color:rgba(30,44,34,.7);margin-bottom:20px">Ground your thinking in who has this problem and what they need.</p>
+                <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:16px">
+                  <span style="background:rgba(28,50,34,.14);border-radius:3px;padding:3px 8px;font:500 9px 'DM Sans',sans-serif;color:rgba(28,50,34,.72);letter-spacing:.08em;text-transform:uppercase">▶ Video</span>
+                  <span style="background:rgba(28,50,34,.14);border-radius:3px;padding:3px 8px;font:500 9px 'DM Sans',sans-serif;color:rgba(28,50,34,.72);letter-spacing:.08em;text-transform:uppercase">⊞ Templates</span>
+                  <span style="background:rgba(28,50,34,.14);border-radius:3px;padding:3px 8px;font:500 9px 'DM Sans',sans-serif;color:rgba(28,50,34,.72);letter-spacing:.08em;text-transform:uppercase">✦ AI Coach</span>
+                </div>
+                <div style="font:600 11px 'DM Sans',sans-serif;color:rgba(28,50,34,.5);letter-spacing:.1em;text-transform:uppercase">Enter →</div>
+              </div>
+            </a>
+
+            <!-- Card 3: Market Opportunity -->
+            <a href="FM-03-Market-Opportunity.dc.html" style="position:relative;transform:rotate(-1.4deg);transform-origin:top center;display:block;transition:transform .2s ease" style-hover="transform:rotate(-1.4deg) translateY(-6px) scale(1.02)">
+              <div style="position:absolute;top:-11px;left:50%;transform:translateX(-50%);width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 38% 35%, #9de, #2a7060);box-shadow:0 2px 8px rgba(0,0,0,.62);z-index:2"></div>
+              <div style="background:linear-gradient(148deg, rgba(255,255,255,.13) 0%, transparent 55%), #57906a;padding:30px 30px 26px;box-shadow:4px 8px 28px rgba(0,0,0,.44), 0 2px 5px rgba(0,0,0,.22)">
+                <div style="font:800 68px/1 'Barlow Condensed',sans-serif;color:rgba(255,255,255,.18);letter-spacing:-.02em;margin-bottom:4px">03</div>
+                <div style="border-top:1px solid rgba(255,255,255,.28);padding-top:10px;margin-bottom:9px"></div>
+                <div style="font:700 24px/1.1 'Barlow Condensed',sans-serif;color:#fff;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px">Identify the Market Opportunity</div>
+                <p style="font:300 13px/1.55 'DM Sans',sans-serif;color:rgba(255,255,255,.78);margin-bottom:20px">Map the landscape and understand where your idea fits.</p>
+                <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:16px">
+                  <span style="background:rgba(255,255,255,.18);border-radius:3px;padding:3px 8px;font:500 9px 'DM Sans',sans-serif;color:rgba(255,255,255,.85);letter-spacing:.08em;text-transform:uppercase">▶ Video</span>
+                  <span style="background:rgba(255,255,255,.18);border-radius:3px;padding:3px 8px;font:500 9px 'DM Sans',sans-serif;color:rgba(255,255,255,.85);letter-spacing:.08em;text-transform:uppercase">⊞ Templates</span>
+                  <span style="background:rgba(255,255,255,.18);border-radius:3px;padding:3px 8px;font:500 9px 'DM Sans',sans-serif;color:rgba(255,255,255,.85);letter-spacing:.08em;text-transform:uppercase">✦ AI Coach</span>
+                </div>
+                <div style="font:600 11px 'DM Sans',sans-serif;color:rgba(255,255,255,.55);letter-spacing:.1em;text-transform:uppercase">Enter →</div>
+              </div>
+            </a>
+
+            <!-- Card 4: Align to Organization -->
+            <a href="FM-04-Align-to-Org.dc.html" style="position:relative;transform:rotate(2.6deg);transform-origin:top center;display:block;transition:transform .2s ease" style-hover="transform:rotate(2.6deg) translateY(-6px) scale(1.02)">
+              <div style="position:absolute;top:-8px;left:50%;transform:translateX(-50%);width:54px;height:14px;background:rgba(246,229,162,.76);border-radius:1px;box-shadow:0 1px 4px rgba(0,0,0,.22)"></div>
+              <div style="background:linear-gradient(148deg, rgba(255,255,255,.13) 0%, transparent 55%), #5878a0;padding:30px 30px 26px;box-shadow:4px 8px 28px rgba(0,0,0,.44), 0 2px 5px rgba(0,0,0,.22)">
+                <div style="font:800 68px/1 'Barlow Condensed',sans-serif;color:rgba(255,255,255,.18);letter-spacing:-.02em;margin-bottom:4px">04</div>
+                <div style="border-top:1px solid rgba(255,255,255,.28);padding-top:10px;margin-bottom:9px"></div>
+                <div style="font:700 24px/1.1 'Barlow Condensed',sans-serif;color:#fff;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px">Align to the Organization</div>
+                <p style="font:300 13px/1.55 'DM Sans',sans-serif;color:rgba(255,255,255,.78);margin-bottom:20px">Connect your idea to strategy, values, and stakeholder needs.</p>
+                <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:16px">
+                  <span style="background:rgba(255,255,255,.18);border-radius:3px;padding:3px 8px;font:500 9px 'DM Sans',sans-serif;color:rgba(255,255,255,.85);letter-spacing:.08em;text-transform:uppercase">▶ Video</span>
+                  <span style="background:rgba(255,255,255,.18);border-radius:3px;padding:3px 8px;font:500 9px 'DM Sans',sans-serif;color:rgba(255,255,255,.85);letter-spacing:.08em;text-transform:uppercase">⊞ Templates</span>
+                  <span style="background:rgba(255,255,255,.18);border-radius:3px;padding:3px 8px;font:500 9px 'DM Sans',sans-serif;color:rgba(255,255,255,.85);letter-spacing:.08em;text-transform:uppercase">✦ AI Coach</span>
+                </div>
+                <div style="font:600 11px 'DM Sans',sans-serif;color:rgba(255,255,255,.55);letter-spacing:.1em;text-transform:uppercase">Enter →</div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#1d3326;padding:28px 48px;display:flex;align-items:center;justify-content:space-between;margin-top:auto">
+    <span style="font:800 11px 'Barlow Condensed',sans-serif;letter-spacing:.14em;color:rgba(246,241,231,.5);text-transform:uppercase">The Farmer's Market · Idea Validation</span>
+    <div style="display:flex;gap:28px">
+      <a href="FM-01-Define-the-Problem.dc.html" style="font:400 12px 'DM Sans',sans-serif;color:rgba(246,241,231,.38)">01 Define the Problem</a>
+      <a href="FM-02-Understand-the-User.dc.html" style="font:400 12px 'DM Sans',sans-serif;color:rgba(246,241,231,.38)">02 Understand the User</a>
+      <a href="FM-03-Market-Opportunity.dc.html" style="font:400 12px 'DM Sans',sans-serif;color:rgba(246,241,231,.38)">03 Market Opportunity</a>
+      <a href="FM-04-Align-to-Org.dc.html" style="font:400 12px 'DM Sans',sans-serif;color:rgba(246,241,231,.38)">04 Align to Organization</a>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>
