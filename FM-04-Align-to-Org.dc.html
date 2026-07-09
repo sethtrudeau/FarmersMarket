@@ -86,20 +86,14 @@
             <div style="flex:1;height:1px;background:#ece6dc"></div>
           </div>
           <div style="display:flex;gap:12px">
-            <a href="{{ resourceLink1 }}" target="_blank" rel="noopener" style="flex:1;border:1px solid #e6e0d6;border-radius:8px;padding:16px 18px;display:flex;align-items:center;gap:14px" style-hover="border-color:#5878a0;box-shadow:0 2px 8px rgba(0,0,0,.06)">
-              <div style="width:36px;height:36px;border-radius:6px;background:#e5b040;flex-shrink:0;display:flex;align-items:center;justify-content:center">
-                <span style="font:700 10px monospace;color:#1e2c22">GS</span>
-              </div>
+            <a href="{{ resourceLink1 }}" target="_blank" rel="noopener" style="flex:1;border:1px solid #e6e0d6;border-left:3px solid #5878a0;border-radius:8px;padding:16px 18px;display:flex;align-items:center;gap:14px" style-hover="box-shadow:0 2px 8px rgba(0,0,0,.06)">
               <div style="flex:1;min-width:0">
                 <div style="font:500 13px 'DM Sans',sans-serif;color:#1e2c22;margin-bottom:3px">{{ resourceName1 }}</div>
                 <div style="font:300 11px 'DM Sans',sans-serif;color:#8a7a5c">Copy to use</div>
               </div>
               <span style="font:500 12px 'DM Sans',sans-serif;color:#5878a0;flex-shrink:0">Open →</span>
             </a>
-            <a href="{{ resourceLink2 }}" target="_blank" rel="noopener" style="flex:1;border:1px solid #e6e0d6;border-radius:8px;padding:16px 18px;display:flex;align-items:center;gap:14px" style-hover="border-color:#5878a0;box-shadow:0 2px 8px rgba(0,0,0,.06)">
-              <div style="width:36px;height:36px;border-radius:6px;background:#57906a;flex-shrink:0;display:flex;align-items:center;justify-content:center">
-                <span style="font:700 10px monospace;color:#fff">GD</span>
-              </div>
+            <a href="{{ resourceLink2 }}" target="_blank" rel="noopener" style="flex:1;border:1px solid #e6e0d6;border-left:3px solid #5878a0;border-radius:8px;padding:16px 18px;display:flex;align-items:center;gap:14px" style-hover="box-shadow:0 2px 8px rgba(0,0,0,.06)">
               <div style="flex:1;min-width:0">
                 <div style="font:500 13px 'DM Sans',sans-serif;color:#1e2c22;margin-bottom:3px">{{ resourceName2 }}</div>
                 <div style="font:300 11px 'DM Sans',sans-serif;color:#8a7a5c">Copy to use</div>
@@ -118,7 +112,7 @@
           <p style="font:300 13px/1.55 'DM Sans',sans-serif;color:#7a8a7e;margin-bottom:14px">Work through your organizational alignment with an AI coach. Get help framing the case for your idea.</p>
           <sc-if value="{{ playlabEmbed }}">
             <div style="border-radius:8px;overflow:hidden;height:440px">
-              <iframe src="{{ playlabEmbed }}" width="100%" height="100%" frameborder="0" style="display:block"></iframe>
+              <iframe src="{{ playlabEmbed }}" width="100%" height="100%" frameborder="0" allow="microphone; camera; clipboard-write; fullscreen" style="display:block"></iframe>
             </div>
           </sc-if>
           <sc-if value="{{ !playlabEmbed }}">
