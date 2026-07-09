@@ -22,6 +22,31 @@ function prop(page, name) {
   }
 }
 
+// Converts a Notion rich_text array to an HTML string, preserving
+// bold, italic, underline, strikethrough, code, and newlines.
+function richProp(page, name) {
+  const p = page.properties[name];
+  if (!p) return null;
+  const blocks = p.type === 'title' ? p.title : p.type === 'rich_text' ? p.rich_text : [];
+  if (!blocks.length) return null;
+
+  return blocks.map(block => {
+    let text = block.plain_text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/\n/g, '<br>');
+
+    const a = block.annotations;
+    if (a.code)          text = `<code>${text}</code>`;
+    if (a.bold)          text = `<strong>${text}</strong>`;
+    if (a.italic)        text = `<em>${text}</em>`;
+    if (a.strikethrough) text = `<s>${text}</s>`;
+    if (a.underline)     text = `<u>${text}</u>`;
+    return text;
+  }).join('') || null;
+}
+
 module.exports = async function handler(req, res) {
   if (req.method !== 'GET') return res.status(405).end();
 
@@ -39,9 +64,9 @@ module.exports = async function handler(req, res) {
     const sections = response.results.map(page => ({
       number:           prop(page, 'Number'),
       title:            prop(page, 'Title'),
-      headline:         prop(page, 'Headline'),
-      description:      prop(page, 'Description'),
-      cardTagline:      prop(page, 'CardTagline'),
+      headline:         richProp(page, 'Headline'),
+      description:      richProp(page, 'Description'),
+      cardTagline:      richProp(page, 'CardTagline'),
       accentColor:      prop(page, 'AccentColor'),
       videoEmbed:       prop(page, 'VideoEmbed'),
       videoDescription: prop(page, 'VideoDescription'),

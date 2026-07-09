@@ -35,20 +35,21 @@
       if (!rootName) return;
 
       if (isHome) {
-        var homeProps = {};
-        sections.forEach(function (s) {
-          homeProps['cardTagline' + s.number] = s.cardTagline || null;
+        // No dc props needed for home — all text injected via innerHTML below
+        requestAnimationFrame(function () {
+          sections.forEach(function (s) {
+            var el = document.getElementById('card-tagline-' + s.number);
+            if (el && s.cardTagline) el.innerHTML = s.cardTagline;
+          });
         });
-        window.__dcSetProps(rootName, homeProps);
         return;
       }
 
       var section = sections.find(function (s) { return s.number === sectionNum; });
       if (!section) return;
 
+      // Pass URL/conditional fields through dc-runtime so <sc-if> and href="{{ }}" work
       window.__dcSetProps(rootName, {
-        headline:         section.headline         || null,
-        description:      section.description      || null,
         videoEmbed:       section.videoEmbed       || null,
         videoDescription: section.videoDescription || null,
         playlabEmbed:     section.playlabEmbed     || null,
@@ -56,6 +57,14 @@
         resourceName1:    section.resourceName1    || null,
         resourceLink2:    section.resourceLink2    || null,
         resourceName2:    section.resourceName2    || null,
+      });
+
+      // Inject rich text after React commits its re-render
+      requestAnimationFrame(function () {
+        var h = document.getElementById('section-headline');
+        var d = document.getElementById('section-description');
+        if (h && section.headline)    h.innerHTML = section.headline;
+        if (d && section.description) d.innerHTML = section.description;
       });
     })
     .catch(function (err) {
