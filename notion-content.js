@@ -4,8 +4,9 @@
   var sectionNum = document.body.dataset.section
     ? parseInt(document.body.dataset.section, 10)
     : null;
+  var isHome = document.body.dataset.page === 'home';
 
-  if (!sectionNum) return;
+  if (!sectionNum && !isHome) return;
 
   // Resolves once the dc-runtime has booted and exposed its API on window
   function runtimeReady() {
@@ -29,15 +30,25 @@
   ])
     .then(function (results) {
       var data = results[0];
-      var section = (data.sections || []).find(function (s) {
-        return s.number === sectionNum;
-      });
-      if (!section) return;
-
+      var sections = data.sections || [];
       var rootName = window.__dcRootName();
       if (!rootName) return;
 
+      if (isHome) {
+        var homeProps = {};
+        sections.forEach(function (s) {
+          homeProps['cardTagline' + s.number] = s.cardTagline || null;
+        });
+        window.__dcSetProps(rootName, homeProps);
+        return;
+      }
+
+      var section = sections.find(function (s) { return s.number === sectionNum; });
+      if (!section) return;
+
       window.__dcSetProps(rootName, {
+        headline:         section.headline         || null,
+        description:      section.description      || null,
         videoEmbed:       section.videoEmbed       || null,
         videoDescription: section.videoDescription || null,
         playlabEmbed:     section.playlabEmbed     || null,
