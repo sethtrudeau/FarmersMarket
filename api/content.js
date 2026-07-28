@@ -75,6 +75,7 @@ module.exports = async function handler(req, res) {
       resourceName1:    prop(page, 'ResourceName1'),
       resourceLink2:    prop(page, 'ResourceLink2'),
       resourceName2:    prop(page, 'ResourceName2'),
+      guidingQuestions: richProp(page, 'GuidingQuestions'),
     }));
 
     _cache = { sections };

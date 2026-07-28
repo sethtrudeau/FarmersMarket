@@ -65,6 +65,12 @@
         var d = document.getElementById('section-description');
         if (h && section.headline)    h.innerHTML = section.headline;
         if (d && section.description) d.innerHTML = section.description;
+        var gq = document.getElementById('guiding-questions');
+        var gqBody = document.getElementById('guiding-questions-body');
+        if (gq && gqBody && section.guidingQuestions) {
+          gqBody.innerHTML = section.guidingQuestions;
+          gq.style.display = '';
+        }
       });
     })
     .catch(function (err) {
